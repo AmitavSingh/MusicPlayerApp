@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MusicPlayerApp</string>
+    <string name="current_image_song">Current Image Song</string>
+    <string name="image_play_pause">Image Play Pause</string>
+    <string name="item_image">Item Image</string>
+    <string name="playlist_title">Playlist Title</string>
+    <string name="_100_songs">100 Songs</string>
+    <string name="song_name">SONG NAME</string>
+    <string name="song_image">Song Image</string>
+    <string name="_00_00">00:00</string>
+    <string name="title">Title</string>
+    <string name="skip_image">Skip Image</string>
+    <string name="skip_previous_image">Skip Previous Image</string>
+    <string name="play_pause_detail_image">Play Pause Detail Image</string>
+    <string name="song_image_new">Song Image</string>
+    <string name="song_name_new">SONG NAME</string>
+    <string name="play_pause_details">Play Pause Details</string>
+</resources>

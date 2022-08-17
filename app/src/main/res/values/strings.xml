@@ -15,4 +15,7 @@
     <string name="song_image_new">Song Image</string>
     <string name="song_name_new">SONG NAME</string>
     <string name="play_pause_details">Play Pause Details</string>
+
+    <string name="notification_channel_name">Music Channel</string>
+    <string name="notification_channel_description">Shows the currently playing music</string>
 </resources>

@@ -5,9 +5,6 @@ import android.support.v4.media.MediaDescriptionCompat
 import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.MediaMetadataCompat.*
 import androidx.core.net.toUri
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.demo.amitav.musicplayerapp.data.entities.Song
 import com.demo.amitav.musicplayerapp.data.remote.MusicDatabase
 import com.demo.amitav.musicplayerapp.exoplayer.State.*
 import com.google.android.exoplayer2.MediaItem
@@ -15,7 +12,6 @@ import com.google.android.exoplayer2.source.ConcatenatingMediaSource
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.upstream.DefaultDataSource
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
@@ -24,10 +20,9 @@ class FirebaseMusicSource @Inject constructor(
 ) {
 
     var songs = emptyList<MediaMetadataCompat>()
-    suspend fun fetchMediaData() = withContext(Dispatchers.Main) {
+    suspend fun fetchMediaData() = withContext(Dispatchers.Default) {
         state = STATE_INITIALIZING
-        async { musicDatabase.getAllSongs {  } }.await()
-        musicDatabase.getAllSongs(){
+        musicDatabase.getAllSongs {
             songs = it.map { song ->
                 Builder()
                     .putString(METADATA_KEY_ARTIST, song.subtitle)

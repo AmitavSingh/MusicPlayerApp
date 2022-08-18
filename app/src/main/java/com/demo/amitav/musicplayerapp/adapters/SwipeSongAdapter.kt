@@ -7,7 +7,7 @@ import com.demo.amitav.musicplayerapp.R
 import kotlinx.android.synthetic.main.list_item.view.*
 import javax.inject.Inject
 
-class SwipeSongAdapter : BaseSongAdapter(R.layout.list_item) {
+class SwipeSongAdapter : BaseSongAdapter(R.layout.swipe_item) {
 
     override val differ = AsyncListDiffer(this, diffCallback)
 
